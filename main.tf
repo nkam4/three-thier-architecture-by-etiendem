@@ -142,7 +142,7 @@ resource "aws_instance" "webserver1" {
   user_data              = file("install_apache.sh")
 
   tags = {
-    Name = "Web Server"
+    Name = "Web Server1"
   }
 
 }
@@ -156,7 +156,7 @@ resource "aws_instance" "webserver2" {
   user_data              = file("install_apache.sh")
 
   tags = {
-    Name = "Web Server"
+    Name = "Web Server2"
   }
 
 }
@@ -311,4 +311,4 @@ resource "aws_db_subnet_group" "default" {
 output "lb_dns_name" {
   description = "The DNS name of the load balancer"
   value       = aws_lb.external-elb.dns_name
-}
+} 
